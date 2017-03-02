@@ -1,0 +1,196 @@
+SWEN-250 Document Analysis Journal
+
+Your name: MY TRAN
+
+================================================================
+Makefile
+Start
+Estimated Time	00 30
+Plan:
+(Order of implementation, testing approach, etc.)
+- Follow some Makefile files given in some last activities.
+
+Complete
+Actual Time	00 30
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+- The name of the file should be "Makefile", not "MakeFile"
+
+================================================================
+read_file
+Start
+Estimated Time	07 00
+Plan:
+(Order of implementation, testing approach, etc.)
+- Readfile() will handle:
+    - words that have non-letter characters: swen_250, free_list...
+    - words that have the Apostrophe: list's
+    - sentences that have at least one word
+    - ellipsis "..."
+
+- Make a "Current" node pointer to keep track of the current position in the linked list.
+
+- Make a "sen_count" global variable to count the number of sentence but don't include it to the word node.
+
+- Build helper function: int compare( char* str1, char* str2 ) to help push word in to the list alphabetically.
+
+- Build helper function: void push( char* w ) to help push the word in to the correct position of the list.
+
+Complete
+Actual Time	10 00
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+- Use isspace(* char) to check if the char is a white space or not.
+
+- Use isalpha(* char) to check if char is in the alphabet or not.
+
+- Always end a string with '\0' or else you can't even print the string out.
+
+- To make a copy of a string, have to make a new pointer and malloc a new block of dynamic memory.
+
+- Always malloc 1 more than the length of the string: malloc( strlen(w) + 1 ).
+
+- Reset/ Increase variables for the next while loop.
+
+- push() function needs to consider:
+    - Push to the head
+    - Push in the middle
+    - Push to the bottom
+
+- Reset the CURRENT pointer each time you manipulate the head while reading the fi
+
+- Reset P_WORK = HEAD after we're done pushing each word.
+
+- strcat( *pointer, constant_string ), strmp( *char, *char).
+
+- Use fseek(file, 0 , SEEK_SET) to move the pointer to the head of the file after checking if the file is empty.
+
+================================================================
+free_list
+Start
+Estimated Time	00 30
+Plan:
+(Order of implementation, testing approach, etc.)
+- Create a p_work pointer to help freeing nodes.
+
+Complete
+Actual Time	01 00
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+- Can't just free the head of the list but also all nodes in the list.
+- Also have to free the "unique_word" pointer of each node before freeing a node.
+================================================================
+get_first_word
+Start
+Estimated Time	01 00
+Plan:
+(Order of implementation, testing approach, etc.)
+- Implement this after read_file().
+
+Complete
+Actual Time	00 30
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+- Make sure your readfile() and the helper push() work correctly.
+
+================================================================
+get_next_word
+Start
+Estimated Time	00 30
+Plan:
+(Order of implementation, testing approach, etc.)
+- Implement this after read_file().
+- Hanlde the case when there is no next word.
+
+Complete
+Actual Time	00 30
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+- Must have a current pointer that keeps track while you navigate through the list.
+
+================================================================
+get_prev_word
+Start
+Estimated Time	00 30
+Plan:
+(Order of implementation, testing approach, etc.)
+- Implement this after read_file().
+- Handle the case when there is no previous word.
+
+Complete
+Actual Time	00 30
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+- Must have a current pointer that keeps track while you navigate through the list.
+
+================================================================
+get_last_word
+Start
+Estimated Time	00 30
+Plan:
+(Order of implementation, testing approach, etc.)
+- Implement this after read_file().
+- Handle the case when the list is empty.
+
+Complete
+Actual Time	00 30
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+- Use another pointer to loop through the list, not the head pointer itself.
+
+================================================================
+get_sentence_count
+Start
+Estimated Time	00 30
+Plan:
+(Order of implementation, testing approach, etc.)
+- Implement this after read_file().
+
+Complete
+Actual Time	00 30
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+- Once you have the global varible "sen_count", this function is basically handled in read_file().
+
+================================================================
+get_unique_word_count
+Start
+Estimated Time	00 30
+Plan:
+(Order of implementation, testing approach, etc.)
+- Implement this after read_file().
+
+Complete
+Actual Time	00 30
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+- A correct read_file() function will help to create a correct count of any unique word.
+
+
+================================================================
+bonus get_most_common_word_after_this_word
+Start
+Estimated Time	HH MM
+Plan:
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	HH MM
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
+bonus write_unique_word_list_to_csv_file
+Start
+Estimated Time	HH MM
+Plan:
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	HH MM
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================

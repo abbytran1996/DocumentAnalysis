@@ -1,0 +1,12 @@
+File: SWEN-250 Activity Journal.
+
+Your's name: MY TRAN.
+
+================================================================
+
+Estimated Time  00 30
+Plan:
+
+(Order of implementation, file, etc.)
+
+- Follow the Makefile file in the Linked List's activity.
